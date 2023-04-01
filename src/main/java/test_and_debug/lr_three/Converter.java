@@ -340,6 +340,18 @@ public class Converter {
 
                 throw new IllegalArgumentException("getFromSIToGalon() works only for 1 cubic meter");
             }
+
+            /***
+             * Метод конвертирует объйм из пинта в метры кубические
+             * @param value - объём в пинта
+             * @return результат - объём в метрах кубических
+             */
+            public static double getFromPintaToSI(double value) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if (value == 1.0) return 0.0004732;
+
+                throw new IllegalArgumentException("getFromPintaToSI() works only for 1 pinta");
+            }
         }
 
     }
