@@ -283,6 +283,18 @@ public class Converter {
 
                 throw new IllegalArgumentException("getFromSIToFunt() works only for 1 kilogram");
             }
+
+            /***
+             * Метод конвертирует массу из унций в килограммы
+             * @param mass - масса в унциях
+             * @return результат - масса в килограммах
+             */
+            public static double getFromUnciyaToSI(double mass) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if (mass == 1.0) return 0.02835;
+
+                throw new IllegalArgumentException("getFromUnciyaToSI() works only for 1 unciya");
+            }
         }
 
         public static class Value {
