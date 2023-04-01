@@ -328,6 +328,18 @@ public class Converter {
 
                 throw new IllegalArgumentException("getFromGalonToSI() works only for 1 galon");
             }
+
+            /***
+             * Метод конвертирует объём из метров кубических в галон
+             * @param value - объём в метрах кубических
+             * @return результат - объём в галон
+             */
+            public static double getFromSIToGalon(double value) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if (value == 1.0) return 1.0 / 0.003785;
+
+                throw new IllegalArgumentException("getFromSIToGalon() works only for 1 cubic meter");
+            }
         }
 
     }
