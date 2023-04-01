@@ -14,4 +14,9 @@ class ConverterTest {
     public void oldRusSystemClassCreationTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$OldRusSystem");
     }
+
+    @Test
+    public void usaSystemClassCreationTest() throws ClassNotFoundException{
+        Class.forName("test_and_debug.lr_three.Converter$UsaSystem");
+    }
 }
