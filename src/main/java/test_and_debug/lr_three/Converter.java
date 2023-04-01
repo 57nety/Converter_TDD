@@ -46,7 +46,6 @@ public class Converter {
              * @return результат - длина в метрах
              */
             public static double getFromArshinToSI(double length) {
-                // todo реализовать метод позднее
                 return length * 0.7112;
             }
 
@@ -298,11 +297,8 @@ public class Converter {
              * @param value - объём в баррель
              * @return результат - объём в кубических метрах
              */
-            public static double getFromBarrelToSI(double value) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (value == 1.0) return 0.159;
-
-                throw new IllegalArgumentException("getFromBarrelToSI() works only for 1 barrel");
+            public static double getFromBarrelToSI(double value){
+                return value * 0.159;
             }
 
             /***
@@ -310,11 +306,8 @@ public class Converter {
              * @param value - объём в кубических метрах
              * @return результат - объём в баррель
              */
-            public static double getFromSIToBarrel(double value) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (value == 1.0) return 1.0 / 0.159;
-
-                throw new IllegalArgumentException("getFromSIToBarrel() works only for 1 cubic meter");
+            public static double getFromSIToBarrel(double value) {
+                return value / 0.159;
             }
 
             /***
@@ -322,11 +315,8 @@ public class Converter {
              * @param value - объём в метрах кубических
              * @return результат - объём в метрах кубических
              */
-            public static double getFromGalonToSI(double value) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (value == 1.0) return 0.003785;
-
-                throw new IllegalArgumentException("getFromGalonToSI() works only for 1 galon");
+            public static double getFromGalonToSI(double value) {
+                return value * 0.003785;
             }
 
             /***
@@ -334,11 +324,8 @@ public class Converter {
              * @param value - объём в метрах кубических
              * @return результат - объём в галон
              */
-            public static double getFromSIToGalon(double value) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (value == 1.0) return 1.0 / 0.003785;
-
-                throw new IllegalArgumentException("getFromSIToGalon() works only for 1 cubic meter");
+            public static double getFromSIToGalon(double value){
+                return value / 0.003785;
             }
 
             /***
@@ -346,11 +333,8 @@ public class Converter {
              * @param value - объём в пинта
              * @return результат - объём в метрах кубических
              */
-            public static double getFromPintaToSI(double value) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (value == 1.0) return 0.0004732;
-
-                throw new IllegalArgumentException("getFromPintaToSI() works only for 1 pinta");
+            public static double getFromPintaToSI(double value){
+                return value * 0.0004732;
             }
 
             /***
@@ -358,11 +342,8 @@ public class Converter {
              * @param value - объём в метрах кубических
              * @return результат - объём в пинта
              */
-            public static double getFromSIToPinta(double value) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (value == 1.0) return 1.0 / 0.0004732;
-
-                throw new IllegalArgumentException("getFromSIToPinta() works only for 1 cubic meter");
+            public static double getFromSIToPinta(double value) {
+                return value / 0.0004732;
             }
         }
 
