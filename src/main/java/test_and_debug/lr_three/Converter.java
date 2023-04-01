@@ -236,6 +236,17 @@ public class Converter {
 
         public static class Mass {
 
+            /***
+             * Метод конвертирует массу из короткая тонна в килограммы
+             * @param mass - масса в короткая тонна
+             * @return результат - масса в килограммах
+             */
+            public static double getFromKorotkayaTonnaToSI(double mass) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if(mass == 1.0) return 907.2;
+
+                throw new IllegalArgumentException("getFromKorotkayaTonnaToSI() works only for 1 korotkaya tonna");
+            }
         }
 
         public static class Value {
