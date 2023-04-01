@@ -259,6 +259,18 @@ public class Converter {
 
                 throw new IllegalArgumentException("getFromSIToKorotkayaTonna() works only for 1 kilogram");
             }
+
+            /***
+             * Метод конвертирует массу из фунтов в килограммы
+             * @param mass - масса в фунтах
+             * @return результат - масса в килограммах
+             */
+            public static double getFromFuntToSI(double mass) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if(mass == 1.0) return 0.4536;
+
+                throw new IllegalArgumentException("getFromFuntToSI() works only for 1 funt");
+            }
         }
 
         public static class Value {
