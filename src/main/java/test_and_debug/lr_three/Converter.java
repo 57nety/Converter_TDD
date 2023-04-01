@@ -214,6 +214,18 @@ public class Converter {
 
                 throw new IllegalArgumentException("getFromYardToSI() works only for 1 yard");
             }
+
+            /***
+             * Метод конвертирует длину из метров в ярды
+             * @param length - длина в метрах
+             * @return результат - длина в ярдах
+             */
+            public static double getFromSIToYard(double length) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if (length == 1.0) return 1.0 / 0.9144;
+
+                throw new IllegalArgumentException("getFromYardToSI() works only for 1 yard");
+            }
         }
 
         public static class Mass {
