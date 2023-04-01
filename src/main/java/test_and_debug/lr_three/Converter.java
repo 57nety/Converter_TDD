@@ -122,6 +122,18 @@ public class Converter {
 
                 throw new IllegalArgumentException("getFromDolyaToSI() works only for 1 dolya");
             }
+
+            /***
+             * Метод конвертирует массу из килограммов в доля
+             * @param mass - масса в килограммах
+             * @return результат - масса в доля
+             */
+            public static double getFromSIToDolya(double mass) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if (mass == 1.0) return 1.0/0.00004443;
+
+                throw new IllegalArgumentException("getFromSIToDolya() works only for 1 kilogram");
+            }
         }
 
         public static class Value {

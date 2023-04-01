@@ -65,22 +65,22 @@ class ConverterTest {
     }
 
     @Test
-    public void converterOldRusSystemMassFromZolotnikToKilogram(){
+    public void converterOldRusSystemMassFromOneZolotnikToKilogram(){
         Assertions.assertEquals(0.004266,Converter.OldRusSystem.Mass.getFromZolotnikToSI(1.0));
     }
 
     @Test
-    public void converterOldRusSystemMassFromKilogramToZolotnik(){
+    public void converterOldRusSystemMassFromOneKilogramToZolotnik(){
         Assertions.assertEquals(1.0/0.004266,Converter.OldRusSystem.Mass.getFromSIToZolotnik(1.0));
     }
 
     @Test
-    public void converterOldRusSystemMassFromDolyaToKilogram(){
+    public void converterOldRusSystemMassFromOneDolyaToKilogram(){
         Assertions.assertEquals(0.00004443,Converter.OldRusSystem.Mass.getFromDolyaToSI(1.0));
     }
 
     @Test
-    public void converterOldRusSystemMassFromKilogramToDolya(){
+    public void converterOldRusSystemMassFromOneKilogramToDolya(){
         Assertions.assertEquals(1.0/0.00004443,Converter.OldRusSystem.Mass.getFromSIToDolya(1.0));
     }
 
