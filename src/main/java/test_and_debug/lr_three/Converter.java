@@ -149,6 +149,18 @@ public class Converter {
 
                 throw new IllegalArgumentException("getFromShtofToSI() works only for 1 shtof");
             }
+
+            /***
+             * Метод конвертирует объём из кубических метров в штоф
+             * @param value - объём в кубических метрах
+             * @return результат - объём в штоф
+             */
+            public static double getFromSIToShtof(double value) {
+                // todo реализовать метод позднее
+                if (value == 1.0) return 1/0.00123;
+
+                throw new IllegalArgumentException("getFromSIToShtof() works only for 1 cubic meter");
+            }
         }
 
     }
