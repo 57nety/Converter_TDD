@@ -243,7 +243,7 @@ public class Converter {
              */
             public static double getFromKorotkayaTonnaToSI(double mass) throws IllegalArgumentException {
                 // todo реализовать метод позднее
-                if(mass == 1.0) return 907.2;
+                if (mass == 1.0) return 907.2;
 
                 throw new IllegalArgumentException("getFromKorotkayaTonnaToSI() works only for 1 korotkaya tonna");
             }
@@ -255,7 +255,7 @@ public class Converter {
              */
             public static double getFromSIToKorotkayaTonna(double mass) throws IllegalArgumentException {
                 // todo реализовать метод позднее
-                if(mass == 1.0) return 1.0/907.2;
+                if (mass == 1.0) return 1.0 / 907.2;
 
                 throw new IllegalArgumentException("getFromSIToKorotkayaTonna() works only for 1 kilogram");
             }
@@ -267,9 +267,21 @@ public class Converter {
              */
             public static double getFromFuntToSI(double mass) throws IllegalArgumentException {
                 // todo реализовать метод позднее
-                if(mass == 1.0) return 0.4536;
+                if (mass == 1.0) return 0.4536;
 
                 throw new IllegalArgumentException("getFromFuntToSI() works only for 1 funt");
+            }
+
+            /***
+             * Метод конвертирует массу из килограммов в фунты
+             * @param mass - масса в килограммах
+             * @return результат - масса в фунтах
+             */
+            public static double getFromSIToFunt(double mass) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if (mass == 1.0) return 1.0 / 0.4536;
+
+                throw new IllegalArgumentException("getFromSIToFunt() works only for 1 kilogram");
             }
         }
 
