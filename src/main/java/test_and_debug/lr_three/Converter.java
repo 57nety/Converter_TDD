@@ -46,10 +46,22 @@ public class Converter {
              * @return результат - длина в маховая сажень
              */
             public static double getFromSIToMahovayaSajen(double length) throws IllegalArgumentException {
-                //todo ркализовать метод позднее
+                //todo реализовать метод позднее
                 if (length == 1.0) return 1.0/1.76;
 
                 throw new IllegalArgumentException("getFromSIToMahovayaSajen works only for 1 meter");
+            }
+
+            /***
+             * Метод конвертирует длинну из аршин в метры
+             * @param length - длина в аршин
+             * @return результат - длина в метрах
+             */
+            public static double getFromArshinToSI(double length) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if(length == 1.0) return 0.7112;
+
+                throw new IllegalArgumentException("getFromArshinToSI works only for 1 arshin");
             }
         }
 
