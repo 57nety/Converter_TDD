@@ -90,6 +90,11 @@ class ConverterTest {
     }
 
     @Test
+    public void converterOldRusSystemValueFromOneShtofToCubicMeter(){
+        Assertions.assertEquals(0.00123,Converter.OldRusSystem.Value.getFromShtofToSI(1.0));
+    }
+
+    @Test
     public void converterHaveUsaSystemAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$UsaSystem");
     }
