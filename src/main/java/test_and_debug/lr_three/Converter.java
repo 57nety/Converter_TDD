@@ -4,4 +4,7 @@ public class Converter {
     public static class OldRusSystem{
 
     }
+    public static class UsaSystem{
+
+    }
 }
