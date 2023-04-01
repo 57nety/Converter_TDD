@@ -167,11 +167,23 @@ public class Converter {
              * @param value - объём в чарка
              * @return результат - объём в метрах кубических
              */
-            public static double getFromCharkaToSI(double value) {
+            public static double getFromCharkaToSI(double value) throws IllegalArgumentException {
                 // todo реализовать метод позднее
                 if (value == 1.0) return 0.000123;
 
                 throw new IllegalArgumentException("getFromCharkaToSI() works only for 1 charka");
+            }
+
+            /***
+             * Метод конвертирует объём из метров кубических в чарка
+             * @param value - объём в метрах кубических
+             * @return результат - объём в чарка
+             */
+            public static double getFromSIToCharka(double value) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if (value == 1.0) return 1.0/0.000123;
+
+                throw new IllegalArgumentException("getFromSIToCharka() works only for 1 cubic meter");
             }
         }
 
