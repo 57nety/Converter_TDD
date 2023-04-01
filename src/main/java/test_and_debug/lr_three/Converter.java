@@ -67,11 +67,8 @@ public class Converter {
              * @param mass - масса в берковец
              * @return результат - масса в килограммах
              */
-            public static double getFromBerkovecToSI(double mass) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (mass == 1.0) return 163.8;
-
-                throw new IllegalArgumentException("getFromBerkovecToSI() works only for 1 berkovec");
+            public static double getFromBerkovecToSI(double mass) {
+                return mass * 163.8;
             }
 
             /***
@@ -79,11 +76,8 @@ public class Converter {
              * @param mass - масса в килограммах
              * @return результат - масса в берковец
              */
-            public static double getFromSiToBerkovec(double mass) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (mass == 1.0) return 1.0 / 163.8;
-
-                throw new IllegalArgumentException("getFromSiToBerkovec() works only for 1 kilogram");
+            public static double getFromSiToBerkovec(double mass) {
+                return mass / 163.8;
             }
 
             /***
@@ -91,12 +85,8 @@ public class Converter {
              * @param mass - масса в золотник
              * @return результат - масса в килограммах
              */
-            public static double getFromZolotnikToSI(double mass) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (mass == 1.0) return 0.004266;
-
-                throw new IllegalArgumentException("getFromZolotnikToSI() works only for 1 zolotnik");
-
+            public static double getFromZolotnikToSI(double mass) {
+                return mass * 0.004266;
             }
 
             /***
@@ -104,11 +94,8 @@ public class Converter {
              * @param mass - масса в килограммах
              * @return результат - масса в золотник
              */
-            public static double getFromSIToZolotnik(double mass) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (mass == 1.0) return 1.0 / 0.004266;
-
-                throw new IllegalArgumentException("getFromSIToZolotnik() works only for 1 kilogram");
+            public static double getFromSIToZolotnik(double mass) {
+                return mass / 0.004266;
             }
 
             /***
@@ -116,11 +103,8 @@ public class Converter {
              * @param mass - масса в доля
              * @return результат - масса в килограммах
              */
-            public static double getFromDolyaToSI(double mass) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (mass == 1.0) return 0.00004443;
-
-                throw new IllegalArgumentException("getFromDolyaToSI() works only for 1 dolya");
+            public static double getFromDolyaToSI(double mass) {
+                return mass * 0.00004443;
             }
 
             /***
@@ -128,11 +112,8 @@ public class Converter {
              * @param mass - масса в килограммах
              * @return результат - масса в доля
              */
-            public static double getFromSIToDolya(double mass) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (mass == 1.0) return 1.0/0.00004443;
-
-                throw new IllegalArgumentException("getFromSIToDolya() works only for 1 kilogram");
+            public static double getFromSIToDolya(double mass) {
+                return mass / 0.00004443;
             }
         }
 
@@ -143,11 +124,8 @@ public class Converter {
              * @param value - объём в штоф
              * @return результат - объём в метрах кубических
              */
-            public static double getFromShtofToSI(double value) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (value == 1.0) return 0.00123;
-
-                throw new IllegalArgumentException("getFromShtofToSI() works only for 1 shtof");
+            public static double getFromShtofToSI(double value) {
+                return value * 0.00123;
             }
 
             /***
@@ -155,11 +133,8 @@ public class Converter {
              * @param value - объём в кубических метрах
              * @return результат - объём в штоф
              */
-            public static double getFromSIToShtof(double value) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (value == 1.0) return 1/0.00123;
-
-                throw new IllegalArgumentException("getFromSIToShtof() works only for 1 cubic meter");
+            public static double getFromSIToShtof(double value) {
+                return value / 0.00123;
             }
 
             /***
@@ -167,11 +142,8 @@ public class Converter {
              * @param value - объём в чарка
              * @return результат - объём в метрах кубических
              */
-            public static double getFromCharkaToSI(double value) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (value == 1.0) return 0.000123;
-
-                throw new IllegalArgumentException("getFromCharkaToSI() works only for 1 charka");
+            public static double getFromCharkaToSI(double value) {
+                return value * 0.000123;
             }
 
             /***
@@ -179,11 +151,8 @@ public class Converter {
              * @param value - объём в метрах кубических
              * @return результат - объём в чарка
              */
-            public static double getFromSIToCharka(double value) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (value == 1.0) return 1.0/0.000123;
-
-                throw new IllegalArgumentException("getFromSIToCharka() works only for 1 cubic meter");
+            public static double getFromSIToCharka(double value) {
+                return value / 0.000123;
             }
 
             /***
@@ -191,11 +160,8 @@ public class Converter {
              * @param value - объём в шкалик
              * @return результат - объём в метрах кубических
              */
-            public static double getFromShkalikToSI(double value) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (value == 1.0) return 0.0000615;
-
-                throw new IllegalArgumentException("getFromShkalikToSI() works only for 1 shkalik");
+            public static double getFromShkalikToSI(double value) {
+                return value * 0.0000615;
             }
 
             /***
@@ -203,11 +169,8 @@ public class Converter {
              * @param value - объём в метрах кубических
              * @return результат - объём в шкалик
              */
-            public static double getFromSIToShkalik(double value) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (value == 1.0) return 1.0/0.0000615;
-
-                throw new IllegalArgumentException("getFromSIToShkalik() works only for 1 cubic meter");
+            public static double getFromSIToShkalik(double value) {
+                return value / 0.0000615;
             }
         }
 
