@@ -211,4 +211,9 @@ class ConverterTest {
         Assertions.assertEquals(1.0 / 0.159, Converter.UsaSystem.Value.getFromSIToBarrel(1.0));
     }
 
+    @Test
+    public void converterUsaSystemValueFromOneGalonToCubicMeter() {
+        Assertions.assertEquals(0.003785, Converter.UsaSystem.Value.getFromGalonToSI(1.0));
+    }
+
 }
