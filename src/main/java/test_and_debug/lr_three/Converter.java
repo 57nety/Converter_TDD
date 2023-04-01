@@ -4,6 +4,18 @@ public class Converter {
     public static class OldRusSystem {
         public static class Length {
 
+            /***
+             * Метод конвертирующий длинну из межевой версты в метры
+             * @param length - длина в межевых верстах
+             * @return результат длина в метрах
+             * @throws IllegalArgumentException
+             */
+            public static double getFromMejevayaVerstaToSI(double length) throws IllegalArgumentException{
+                //todo реализовать метод позднее
+                if (length == 1.0) return 2134.0;
+
+                throw new IllegalArgumentException("getFromMejevayaVerstaToSI works only for 1 mejevaya versta");
+            }
         }
 
         public static class Mass {
