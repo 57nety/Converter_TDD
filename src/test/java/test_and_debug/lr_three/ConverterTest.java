@@ -70,6 +70,11 @@ class ConverterTest {
     }
 
     @Test
+    public void converterOldRusSystemMassFromKilogramToZolotnik(){
+        Assertions.assertEquals(1.0/0.004266,Converter.OldRusSystem.Mass.getFromSIToZolotnik(1.0));
+    }
+
+    @Test
     public void oldRusSystemHaveValueAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$OldRusSystem$Value");
     }
