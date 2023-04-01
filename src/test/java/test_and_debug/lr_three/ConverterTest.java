@@ -1,5 +1,6 @@
 package test_and_debug.lr_three;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,6 +19,11 @@ class ConverterTest {
     @Test
     public void oldRusSystemHaveLengthAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$OldRusSystem$Length");
+    }
+
+    @Test
+    public void converterOldRusSystemLengthFromOneMejevayaVerstaToOneMeter(){
+        Assertions.assertEquals(2134.0,Converter.OldRusSystem.Length.getFromMejevayaVerstaToSI(1));
     }
 
     @Test
