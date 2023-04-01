@@ -185,6 +185,11 @@ class ConverterTest {
     }
 
     @Test
+    public void converterUsaSystemMassFromOneUnciyaToKilogram(){
+        Assertions.assertEquals(0.02835,Converter.UsaSystem.Mass.getFromUnciyaToSI(1.0));
+    }
+
+    @Test
     public void usaSystemHaveValueAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$UsaSystem$Value");
     }
