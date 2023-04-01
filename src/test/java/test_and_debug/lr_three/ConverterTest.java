@@ -138,6 +138,11 @@ class ConverterTest {
     public void converterUsaSystemLengthFromOneMeterToMilya(){
         Assertions.assertEquals(1.0/1609.0,Converter.UsaSystem.Length.getFromSIToMilya(1.0));
     }
+
+    @Test
+    public void converterUsaSystemLengthFromOneYardToMilya(){
+        Assertions.assertEquals(0.9144,Converter.UsaSystem.Length.getFromYardToSI(1.0));
+    }
     
     @Test
     public void usaSystemHaveMassAsInnerClassTest() throws ClassNotFoundException{
