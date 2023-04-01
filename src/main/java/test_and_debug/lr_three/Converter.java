@@ -185,6 +185,18 @@ public class Converter {
 
                 throw new IllegalArgumentException("getFromSIToCharka() works only for 1 cubic meter");
             }
+
+            /***
+             * Метод ковертирует объём из шкалик в метры кубические
+             * @param value - объём в шкалик
+             * @return результат - объём в метрах кубических
+             */
+            public static double getFromShkalikToSI(double value) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if (value == 1.0) return 0.0000615;
+
+                throw new IllegalArgumentException("getFromShkalikToSI() works only for 1 shkalik");
+            }
         }
 
     }
