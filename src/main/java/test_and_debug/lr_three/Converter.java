@@ -6,6 +6,10 @@ public class Converter {
 
         }
 
+        public static class Mass {
+
+        }
+
     }
 
     public static class UsaSystem {
