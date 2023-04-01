@@ -186,7 +186,7 @@ public class Converter {
              */
             public static double getFromMilyaToSI(double length) throws IllegalArgumentException {
                 // todo реализовать метод позднее
-                if (length == 1.0) return 1609;
+                if (length == 1.0) return 1609.0;
 
                 throw new IllegalArgumentException("getFromMilyaToSI() works only for 1 milya");
             }
