@@ -199,4 +199,9 @@ class ConverterTest {
         Class.forName("test_and_debug.lr_three.Converter$UsaSystem$Value");
     }
 
+    @Test
+    public void converterUsaSystemValueFromOneBarrelToCubicMeter(){
+        Assertions.assertEquals(0.159,Converter.UsaSystem.Value.getFromBarrelToSI(1.0));
+    }
+
 }
