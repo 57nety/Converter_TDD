@@ -23,7 +23,11 @@ class ConverterTest {
 
     @Test
     public void converterOldRusSystemLengthFromOneMejevayaVerstaToMeter(){
-        Assertions.assertEquals(2134.0,Converter.OldRusSystem.Length.getFromMejevayaVerstaToSI(1));
+        Assertions.assertEquals(2134.0,Converter.OldRusSystem.Length.getFromMejevayaVerstaToSI(1.0));
+    }
+    @Test
+    public void converterOldRusSystemLengthFromOneMeterToMejevayaVersta(){
+        Assertions.assertEquals(1.0/2134.0,Converter.OldRusSystem.Length.getFromSIToMejevayaVersta(1.0));
     }
 
     @Test
