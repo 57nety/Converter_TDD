@@ -352,6 +352,18 @@ public class Converter {
 
                 throw new IllegalArgumentException("getFromPintaToSI() works only for 1 pinta");
             }
+
+            /***
+             * Метод конвертирует объём из метров кубических в пинта
+             * @param value - объём в метрах кубических
+             * @return результат - объём в пинта
+             */
+            public static double getFromSIToPinta(double value) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if (value == 1.0) return 1.0 / 0.0004732;
+
+                throw new IllegalArgumentException("getFromSIToPinta() works only for 1 cubic meter");
+            }
         }
 
     }
