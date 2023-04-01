@@ -45,4 +45,9 @@ class ConverterTest {
         Class.forName("test_and_debug.lr_three.Converter$UsaSystem$Mass");
     }
 
+    @Test
+    public void usaSystemHaveValueAsInnerClassTest() throws ClassNotFoundException{
+        Class.forName("test_and_debug.lr_three.Converter$UsaSystem$Value");
+    }
+
 }
