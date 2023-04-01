@@ -63,6 +63,18 @@ public class Converter {
 
                 throw new IllegalArgumentException("getFromArshinToSI works only for 1 arshin");
             }
+
+            /***
+             * Метод конвертирует длину из метров в аршин
+             * @param length - длина в метрах
+             * @return результат - длина в аршин
+             */
+            public static double getFromSIToArshin(double length) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if(length == 1.0) return 1.0/0.7112;
+
+                throw new IllegalArgumentException("getFromArshinToSI works only for 1 arshin");
+            }
         }
 
         public static class Mass {
