@@ -128,6 +128,11 @@ class ConverterTest {
     public void usaSystemHaveLengthAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$UsaSystem$Length");
     }
+
+    @Test
+    public void converterUsaSystemLengthFromOneMilyaToMeter(){
+        Assertions.assertEquals(1.609,Converter.UsaSystem.Length.getFromMilyaToSI(1.0));
+    }
     
     @Test
     public void usaSystemHaveMassAsInnerClassTest() throws ClassNotFoundException{
