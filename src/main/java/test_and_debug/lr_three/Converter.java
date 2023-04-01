@@ -184,11 +184,8 @@ public class Converter {
              * @param length - длина в миля
              * @return результат - длина в метрах
              */
-            public static double getFromMilyaToSI(double length) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (length == 1.0) return 1609.0;
-
-                throw new IllegalArgumentException("getFromMilyaToSI() works only for 1 milya");
+            public static double getFromMilyaToSI(double length) {
+                return length * 1609.0;
             }
 
             /***
@@ -196,11 +193,8 @@ public class Converter {
              * @param length - длина в метрах
              * @return результат - длина в милях
              */
-            public static double getFromSIToMilya(double length) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (length == 1.0) return 1.0 / 1609.0;
-
-                throw new IllegalArgumentException("getFromSIToMilya() works only for 1 meter");
+            public static double getFromSIToMilya(double length) {
+                return length / 1609.0;
             }
 
             /***
@@ -208,11 +202,8 @@ public class Converter {
              * @param length - длина в ярдах
              * @return результат - длина в метрах
              */
-            public static double getFromYardToSI(double length) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (length == 1.0) return 0.9144;
-
-                throw new IllegalArgumentException("getFromYardToSI() works only for 1 yard");
+            public static double getFromYardToSI(double length) {
+                return length * 0.9144;
             }
 
             /***
@@ -220,11 +211,8 @@ public class Converter {
              * @param length - длина в метрах
              * @return результат - длина в ярдах
              */
-            public static double getFromSIToYard(double length) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (length == 1.0) return 1.0 / 0.9144;
-
-                throw new IllegalArgumentException("getFromYardToSI() works only for 1 meter");
+            public static double getFromSIToYard(double length) {
+                return length / 0.9144;
             }
 
             /***
@@ -232,11 +220,8 @@ public class Converter {
              * @param length - длина в футах
              * @return результат - длина в метрах
              */
-            public static double getFromFutToSI(double length) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (length == 1.0) return 0.3048;
-
-                throw new IllegalArgumentException("getFromFutToSI() works only for 1 fut");
+            public static double getFromFutToSI(double length) {
+                return length * 0.3048;
             }
 
             /***
@@ -244,11 +229,8 @@ public class Converter {
              * @param length - длина в метрах
              * @return результат - длина в футах
              */
-            public static double getFromSIToFut(double length) throws IllegalArgumentException {
-                // todo реализовать метод позднее
-                if (length == 1.0) return 1.0/0.3048;
-
-                throw new IllegalArgumentException("getFromSIToFut() works only for 1 meter");
+            public static double getFromSIToFut(double length) {
+                return length / 0.3048;
             }
         }
 
