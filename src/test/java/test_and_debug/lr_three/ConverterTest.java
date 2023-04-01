@@ -165,6 +165,11 @@ class ConverterTest {
     }
 
     @Test
+    public void converterUsaSystemMassFromOneKorotkayaTonnaToKilogram(){
+        Assertions.assertEquals(907.2,Converter.UsaSystem.Mass.getFromKorotkayaTonnaToSI(1.0));
+    }
+
+    @Test
     public void usaSystemHaveValueAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$UsaSystem$Value");
     }
