@@ -85,6 +85,19 @@ public class Converter {
 
                 throw new IllegalArgumentException("getFromSiToBerkovec() works only for 1 kilogram");
             }
+
+            /***
+             * Метод конвертирует массу из золотник в килограммы
+             * @param mass - масса в золотник
+             * @return результат - масса в килограммах
+             */
+            public static double getFromZolotnikToSI(double mass) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if(mass == 1.0) return 0.004266;
+
+                throw new IllegalArgumentException("getFromZolotnikToSI() works only for 1 zolotnik");
+
+            }
         }
 
         public static class Value {
