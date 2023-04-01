@@ -155,11 +155,23 @@ public class Converter {
              * @param value - объём в кубических метрах
              * @return результат - объём в штоф
              */
-            public static double getFromSIToShtof(double value) {
+            public static double getFromSIToShtof(double value) throws IllegalArgumentException {
                 // todo реализовать метод позднее
                 if (value == 1.0) return 1/0.00123;
 
                 throw new IllegalArgumentException("getFromSIToShtof() works only for 1 cubic meter");
+            }
+
+            /***
+             * Метод ковертирует объём из чарка в метры кубические
+             * @param value - объём в чарка
+             * @return результат - объём в метрах кубических
+             */
+            public static double getFromCharkaToSI(double value) {
+                // todo реализовать метод позднее
+                if (value == 1.0) return 0.000123;
+
+                throw new IllegalArgumentException("getFromCharkaToSI() works only for 1 charka");
             }
         }
 
