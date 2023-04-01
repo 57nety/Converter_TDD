@@ -232,11 +232,23 @@ public class Converter {
              * @param length - длина в футах
              * @return результат - длина в метрах
              */
-            public static double getFromFutToSI(double length) throws IllegalArgumentException  {
+            public static double getFromFutToSI(double length) throws IllegalArgumentException {
                 // todo реализовать метод позднее
                 if (length == 1.0) return 0.3048;
 
                 throw new IllegalArgumentException("getFromFutToSI() works only for 1 fut");
+            }
+
+            /***
+             * Метод конвертирует длину из метров в футы
+             * @param length - длина в метрах
+             * @return результат - длина в футах
+             */
+            public static double getFromSIToFut(double length) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if (length == 1.0) return 1.0/0.3048;
+
+                throw new IllegalArgumentException("getFromSIToFut() works only for 1 meter");
             }
         }
 
