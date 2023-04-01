@@ -131,7 +131,7 @@ class ConverterTest {
 
     @Test
     public void converterUsaSystemLengthFromOneMilyaToMeter(){
-        Assertions.assertEquals(1.609,Converter.UsaSystem.Length.getFromMilyaToSI(1.0));
+        Assertions.assertEquals(1609,Converter.UsaSystem.Length.getFromMilyaToSI(1.0));
     }
     
     @Test

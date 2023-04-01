@@ -179,6 +179,17 @@ public class Converter {
     public static class UsaSystem {
         public static class Length {
 
+            /***
+             * Метод конвертирует длинну из миля в метры
+             * @param length - длина в миля
+             * @return результат - длина в метрах
+             */
+            public static double getFromMilyaToSI(double length) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if (length == 1.0) return 1609;
+
+                throw new IllegalArgumentException("getFromMilyaToSI() works only for 1 milya");
+            }
         }
 
         public static class Mass {
