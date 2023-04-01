@@ -138,6 +138,17 @@ public class Converter {
 
         public static class Value {
 
+            /***
+             * Метод конвертирует объём из штоф в метр кубический
+             * @param value - объём в штоф
+             * @return результат - объём в метрах кубических
+             */
+            public static double getFromShtofToSI(double value) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if (value == 1.0) return 0.00123;
+
+                throw new IllegalArgumentException("getFromShtofToSI() works only for 1 shtof");
+            }
         }
 
     }
