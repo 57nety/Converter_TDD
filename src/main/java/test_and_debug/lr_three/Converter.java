@@ -36,7 +36,7 @@ public class Converter {
              * @param length - длина в метрах
              * @return результат - длина в маховая сажень
              */
-            public static double getFromSIToMahovayaSajen(double length){
+            public static double getFromSIToMahovayaSajen(double length) {
                 return length / 1.76;
             }
 
@@ -45,7 +45,7 @@ public class Converter {
              * @param length - длина в аршин
              * @return результат - длина в метрах
              */
-            public static double getFromArshinToSI(double length){
+            public static double getFromArshinToSI(double length) {
                 // todo реализовать метод позднее
                 return length * 0.7112;
             }
@@ -55,7 +55,7 @@ public class Converter {
              * @param length - длина в метрах
              * @return результат - длина в аршин
              */
-            public static double getFromSIToArshin(double length){
+            public static double getFromSIToArshin(double length) {
                 return length / 0.7112;
             }
         }
@@ -69,7 +69,7 @@ public class Converter {
              */
             public static double getFromBerkovecToSI(double mass) throws IllegalArgumentException {
                 // todo реализовать метод позднее
-                if(mass == 1.0) return 163.8;
+                if (mass == 1.0) return 163.8;
 
                 throw new IllegalArgumentException("getFromBerkovecToSI() works only for 1 berkovec");
             }
@@ -81,7 +81,7 @@ public class Converter {
              */
             public static double getFromSiToBerkovec(double mass) throws IllegalArgumentException {
                 // todo реализовать метод позднее
-                if(mass == 1.0) return 1.0/163.8;
+                if (mass == 1.0) return 1.0 / 163.8;
 
                 throw new IllegalArgumentException("getFromSiToBerkovec() works only for 1 kilogram");
             }
@@ -93,7 +93,7 @@ public class Converter {
              */
             public static double getFromZolotnikToSI(double mass) throws IllegalArgumentException {
                 // todo реализовать метод позднее
-                if(mass == 1.0) return 0.004266;
+                if (mass == 1.0) return 0.004266;
 
                 throw new IllegalArgumentException("getFromZolotnikToSI() works only for 1 zolotnik");
 
@@ -105,10 +105,22 @@ public class Converter {
              * @return результат - масса в золотник
              */
             public static double getFromSIToZolotnik(double mass) throws IllegalArgumentException {
-                // todo рефлизовать метод позднее
-                if(mass == 1.0) return 1.0/0.004266;
+                // todo реализовать метод позднее
+                if (mass == 1.0) return 1.0 / 0.004266;
 
                 throw new IllegalArgumentException("getFromSIToZolotnik() works only for 1 kilogram");
+            }
+
+            /***
+             * Метод конвертирует массу из доля в килограммы
+             * @param mass - масса в доля
+             * @return результат - масса в килограммах
+             */
+            public static double getFromDolyaToSI(double mass) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if (mass == 1.0) return 0.00004443;
+
+                throw new IllegalArgumentException("getFromDolyaToSI() works only for 1 dolya");
             }
         }
 
