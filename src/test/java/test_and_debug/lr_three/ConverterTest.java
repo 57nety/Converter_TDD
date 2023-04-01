@@ -11,12 +11,12 @@ class ConverterTest {
     }
 
     @Test
-    public void oldRusSystemClassCreationTest() throws ClassNotFoundException{
+    public void converterHaveOldRusSystemAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$OldRusSystem");
     }
 
     @Test
-    public void usaSystemClassCreationTest() throws ClassNotFoundException{
+    public void converterHaveUsaSystemAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$UsaSystem");
     }
 }
