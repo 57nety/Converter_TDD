@@ -180,6 +180,11 @@ class ConverterTest {
     }
 
     @Test
+    public void converterUsaSystemMassFromOneKilogramToFunt(){
+        Assertions.assertEquals(1.0/0.4536,Converter.UsaSystem.Mass.getFromSIToFunt(1.0));
+    }
+
+    @Test
     public void usaSystemHaveValueAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$UsaSystem$Value");
     }
