@@ -40,6 +40,10 @@ class ConverterTest {
     public void converterOldRusSystemLengthFromOneMeterToMahovayaSajen(){
         Assertions.assertEquals(1.0/1.76,Converter.OldRusSystem.Length.getFromSIToMahovayaSajen(1.0));
     }
+    @Test
+    public void converterOldRusSystemLengthFromOneArshinToMeter(){
+        Assertions.assertEquals(0.7112,Converter.OldRusSystem.Length.getFromArshinToSI(1.0));
+    }
 
     @Test
     public void oldRusSystemHaveMassAsInnerClassTest() throws ClassNotFoundException{
