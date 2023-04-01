@@ -73,6 +73,18 @@ public class Converter {
 
                 throw new IllegalArgumentException("getFromBerkovecToSI() works only for 1 berkovec");
             }
+
+            /***
+             * Метод конвертирует массу из килограммов в берковец
+             * @param mass - масса в килограммах
+             * @return результат - масса в берковец
+             */
+            public static double getFromSiToBerkovec(double mass) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if(mass == 1.0) return 1.0/163.8;
+
+                throw new IllegalArgumentException("getFromSiToBerkovec() works only for 1 kilogram");
+            }
         }
 
         public static class Value {
