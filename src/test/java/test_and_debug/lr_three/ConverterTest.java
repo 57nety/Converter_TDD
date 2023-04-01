@@ -21,6 +21,11 @@ class ConverterTest {
     }
 
     @Test
+    public void oldRusSystemHaveMassAsInnerClassTest() throws ClassNotFoundException{
+        Class.forName("test_and_debug.lr_three.Converter$OldRusSystem$Mass");
+    }
+
+    @Test
     public void converterHaveUsaSystemAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$UsaSystem");
     }
