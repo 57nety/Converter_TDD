@@ -9,7 +9,7 @@ public class Converter {
              * @param length - длина в межевых верстах
              * @return результат - длина в метрах
              */
-            public static double getFromMejevayaVerstaToSI(double length) throws IllegalArgumentException{
+            public static double getFromMejevayaVerstaToSI(double length) throws IllegalArgumentException {
                 //todo реализовать метод позднее
                 if (length == 1.0) return 2134.0;
 
@@ -21,9 +21,9 @@ public class Converter {
              * @param length - длина в метрах
              * @return результат - длина в межевых верстах
              */
-            public static double getFromSIToMejevayaVersta(double length) throws IllegalArgumentException{
+            public static double getFromSIToMejevayaVersta(double length) throws IllegalArgumentException {
                 // todo реализовать метод позднее
-                if(length == 1.0) return 1.0/2134.0;
+                if (length == 1.0) return 1.0 / 2134.0;
 
                 throw new IllegalArgumentException("getFromSIToMejevayaVersta works only for 1 meter");
             }
@@ -33,11 +33,23 @@ public class Converter {
              * @param length - длина в маховая сажень
              * @return результат - длина в метрах
              */
-            public static double getFromMahovayaSajenToSI(double length) throws IllegalArgumentException{
+            public static double getFromMahovayaSajenToSI(double length) throws IllegalArgumentException {
                 // todo реализовать метод позднее
-                if(length == 1.0) return 1.76;
+                if (length == 1.0) return 1.76;
 
                 throw new IllegalArgumentException("getFromMahovayaSajenToSI works only for 1 mahovaya sajen");
+            }
+
+            /***
+             * Метод конвертирует длину из метров в маховая сажень
+             * @param length - длина в метрах
+             * @return результат - длина в маховая сажень
+             */
+            public static double getFromSIToMahovayaSajen(double length) throws IllegalArgumentException {
+                //todo ркализовать метод позднее
+                if (length == 1.0) return 1.0/1.76;
+
+                throw new IllegalArgumentException("getFromSIToMahovayaSajen works only for 1 meter");
             }
         }
 
@@ -55,9 +67,11 @@ public class Converter {
         public static class Length {
 
         }
+
         public static class Mass {
 
         }
+
         public static class Value {
 
         }
