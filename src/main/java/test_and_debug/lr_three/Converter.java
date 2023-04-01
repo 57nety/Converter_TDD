@@ -224,7 +224,19 @@ public class Converter {
                 // todo реализовать метод позднее
                 if (length == 1.0) return 1.0 / 0.9144;
 
-                throw new IllegalArgumentException("getFromYardToSI() works only for 1 yard");
+                throw new IllegalArgumentException("getFromYardToSI() works only for 1 meter");
+            }
+
+            /***
+             * Метод конвертирует длину из футов в метры
+             * @param length - длина в футах
+             * @return результат - длина в метрах
+             */
+            public static double getFromFutToSI(double length) throws IllegalArgumentException  {
+                // todo реализовать метод позднее
+                if (length == 1.0) return 0.3048;
+
+                throw new IllegalArgumentException("getFromFutToSI() works only for 1 fut");
             }
         }
 
