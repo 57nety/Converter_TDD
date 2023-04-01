@@ -153,6 +153,11 @@ class ConverterTest {
     public void converterUsaSystemLengthFromOneFutToMilya(){
         Assertions.assertEquals(0.3048,Converter.UsaSystem.Length.getFromFutToSI(1.0));
     }
+
+    @Test
+    public void converterUsaSystemLengthFromOneMilyaToFut(){
+        Assertions.assertEquals(1.0/0.3048,Converter.UsaSystem.Length.getFromSIToFut(1.0));
+    }
     
     @Test
     public void usaSystemHaveMassAsInnerClassTest() throws ClassNotFoundException{
