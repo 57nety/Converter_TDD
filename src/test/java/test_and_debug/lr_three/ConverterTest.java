@@ -37,6 +37,11 @@ class ConverterTest {
     }
 
     @Test
+    public void converterOldRusSystemLengthFromOneMeterToMahovayaSajen(){
+        Assertions.assertEquals(1.0/1.76,Converter.OldRusSystem.Length.getFromSIToMahovayaSajen(1.0));
+    }
+
+    @Test
     public void oldRusSystemHaveMassAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$OldRusSystem$Mass");
     }
