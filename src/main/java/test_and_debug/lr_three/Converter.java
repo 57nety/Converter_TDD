@@ -190,6 +190,18 @@ public class Converter {
 
                 throw new IllegalArgumentException("getFromMilyaToSI() works only for 1 milya");
             }
+
+            /***
+             * Метод конвертирует длинну из метров в мили
+             * @param length - длина в метрах
+             * @return результат - длина в милях
+             */
+            public static double getFromSIToMilya(double length) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if (length == 1.0) return 1.0 / 1609.0;
+
+                throw new IllegalArgumentException("getFromSIToMilya() works only for 1 meter");
+            }
         }
 
         public static class Mass {
