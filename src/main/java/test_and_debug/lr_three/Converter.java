@@ -293,6 +293,17 @@ public class Converter {
 
         public static class Value {
 
+            /***
+             * Метод конвертирует объём из баррель в кубические метры
+             * @param value - объём в баррель
+             * @return результат - объём в кубических метрах
+             */
+            public static double getFromBarrelToSI(double value) throws IllegalArgumentException {
+                // todo реализовать метод позднее
+                if (value == 1.0) return 0.159;
+
+                throw new IllegalArgumentException("getFromBarrelToSI() works only for 1 barrel");
+            }
         }
 
     }
