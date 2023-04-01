@@ -115,6 +115,11 @@ class ConverterTest {
     }
 
     @Test
+    public void converterOldRusSystemValueFromOneCubicMeterToShkalik(){
+        Assertions.assertEquals(1.0/0.0000615,Converter.OldRusSystem.Value.getFromSIToShkalik(1.0));
+    }
+
+    @Test
     public void converterHaveUsaSystemAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$UsaSystem");
     }
