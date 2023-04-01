@@ -10,6 +10,10 @@ public class Converter {
 
         }
 
+        public static class Value {
+
+        }
+
     }
 
     public static class UsaSystem {
