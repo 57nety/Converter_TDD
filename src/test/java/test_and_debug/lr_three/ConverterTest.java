@@ -55,6 +55,11 @@ class ConverterTest {
     }
 
     @Test
+    public void converterOldRusSystemMassFromOneBerkovecToKilogram(){
+        Assertions.assertEquals(163.8,Converter.OldRusSystem.Mass.getFromBerkovecToSI(1.0));
+    }
+
+    @Test
     public void oldRusSystemHaveValueAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$OldRusSystem$Value");
     }
