@@ -75,6 +75,11 @@ class ConverterTest {
     }
 
     @Test
+    public void converterOldRusSystemMassFromDolyaToKilogram(){
+        Assertions.assertEquals(0.00004443,Converter.OldRusSystem.Mass.getFromDolyaToSI(1.0));
+    }
+
+    @Test
     public void oldRusSystemHaveValueAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$OldRusSystem$Value");
     }
