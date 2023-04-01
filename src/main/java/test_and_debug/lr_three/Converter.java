@@ -20,6 +20,9 @@ public class Converter {
         public static class Length {
 
         }
+        public static class Mass {
+
+        }
 
     }
 }
