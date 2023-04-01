@@ -98,6 +98,18 @@ public class Converter {
                 throw new IllegalArgumentException("getFromZolotnikToSI() works only for 1 zolotnik");
 
             }
+
+            /***
+             * Метод конвертирует массу из килограммов в золотник
+             * @param mass - масса в килограммах
+             * @return результат - масса в золотник
+             */
+            public static double getFromSIToZolotnik(double mass) throws IllegalArgumentException {
+                // todo рефлизовать метод позднее
+                if(mass == 1.0) return 1.0/0.004266;
+
+                throw new IllegalArgumentException("getFromSIToZolotnik() works only for 1 kilogram");
+            }
         }
 
         public static class Value {
