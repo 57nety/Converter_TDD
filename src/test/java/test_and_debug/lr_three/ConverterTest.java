@@ -221,4 +221,9 @@ class ConverterTest {
         Assertions.assertEquals(1.0/0.003785, Converter.UsaSystem.Value.getFromSIToGalon(1.0));
     }
 
+    @Test
+    public void converterUsaSystemValueFromOnePintaToCubicMeter() {
+        Assertions.assertEquals(0.0004732, Converter.UsaSystem.Value.getFromPintaToSI(1.0));
+    }
+
 }
