@@ -34,4 +34,10 @@ class ConverterTest {
     public void converterHaveUsaSystemAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$UsaSystem");
     }
+
+    @Test
+    public void usaSystemHaveLengthAsInnerClassTest() throws ClassNotFoundException{
+        Class.forName("test_and_debug.lr_three.Converter$UsaSystem$Length");
+    }
+
 }
