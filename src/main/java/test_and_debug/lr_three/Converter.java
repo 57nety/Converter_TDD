@@ -21,11 +21,23 @@ public class Converter {
              * @param length - длина в метрах
              * @return результат - длина в межевых верстах
              */
-            public static double getFromSIToMejevayaVersta(double length) {
+            public static double getFromSIToMejevayaVersta(double length) throws IllegalArgumentException{
                 // todo реализовать метод позднее
                 if(length == 1.0) return 1.0/2134.0;
 
                 throw new IllegalArgumentException("getFromSIToMejevayaVersta works only for 1 meter");
+            }
+
+            /***
+             * Метод конвертирует длинну из маховая сажень в метры
+             * @param length - длина в маховая сажень
+             * @return результат - длина в метрах
+             */
+            public static double getFromMahovayaSajenToSI(double length) throws IllegalArgumentException{
+                // todo реализовать метод позднее
+                if(length == 1.0) return 1.76;
+
+                throw new IllegalArgumentException("getFromMahovayaSajenToSI works only for 1 mahovaya sajen");
             }
         }
 
