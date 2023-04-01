@@ -105,6 +105,11 @@ class ConverterTest {
     }
 
     @Test
+    public void converterOldRusSystemValueFromOneCubicMeterToCharka(){
+        Assertions.assertEquals(1.0/0.000123,Converter.OldRusSystem.Value.getFromSIToCharka(1.0));
+    }
+
+    @Test
     public void converterHaveUsaSystemAsInnerClassTest() throws ClassNotFoundException{
         Class.forName("test_and_debug.lr_three.Converter$UsaSystem");
     }
