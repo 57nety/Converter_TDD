@@ -1,8 +1,11 @@
 package test_and_debug.lr_three;
 
 public class Converter {
+    private Converter(){}
     public static class OldRusSystem {
+        private OldRusSystem(){}
         public static class Length {
+            private Length(){}
 
             /***
              * Метод конвертирующий длинну из межевой версты в метры
@@ -60,6 +63,7 @@ public class Converter {
         }
 
         public static class Mass {
+            private Mass(){}
 
             /***
              * Метод конвертирует массу из берковец в килограмм
@@ -117,7 +121,7 @@ public class Converter {
         }
 
         public static class Value {
-
+            private Value(){}
             /***
              * Метод конвертирует объём из штоф в метр кубический
              * @param value - объём в штоф
@@ -176,8 +180,9 @@ public class Converter {
     }
 
     public static class UsaSystem {
+        private UsaSystem(){}
         public static class Length {
-
+            private Length(){}
             /***
              * Метод конвертирует длинну из миля в метры
              * @param length - длина в миля
@@ -234,7 +239,7 @@ public class Converter {
         }
 
         public static class Mass {
-
+            private Mass(){}
             /***
              * Метод конвертирует массу из короткая тонна в килограммы
              * @param mass - масса в короткая тонна
@@ -291,7 +296,7 @@ public class Converter {
         }
 
         public static class Value {
-
+            private Value(){}
             /***
              * Метод конвертирует объём из баррель в кубические метры
              * @param value - объём в баррель
