@@ -66,11 +66,32 @@ public class Controller implements Initializable {
     }
 
     public void clickBtnMass() {
+        double massIn = Double.parseDouble(massFrom.getText());
 
+        double massSI = switch (cmbBoxMassFrom.getValue()){
+            case "берковец" -> Converter.OldRusSystem.Mass.getFromBerkovecToSI(massIn);
+            case "золотник" -> Converter.OldRusSystem.Mass.getFromZolotnikToSI(massIn);
+            case "доля" -> Converter.OldRusSystem.Mass.getFromDolyaToSI(massIn);
+            case "короткая тонная" -> Converter.UsaSystem.Mass.getFromKorotkayaTonnaToSI(massIn);
+            case "фунт" -> Converter.UsaSystem.Mass.getFromFuntToSI(massIn);
+            case "унция" -> Converter.UsaSystem.Mass.getFromUnciyaToSI(massIn);
+            case "си" -> massIn;
+        };
+
+        double massOut = switch (cmbBoxMassTo.getValue()){
+            case "берковец" -> Converter.OldRusSystem.Mass.getFromSiToBerkovec(massSI);
+            case "золотник" -> Converter.OldRusSystem.Mass.getFromSIToZolotnik(massSI);
+            case "доля" -> Converter.OldRusSystem.Mass.getFromSIToDolya(massSI);
+            case "короткая тонная" -> Converter.UsaSystem.Mass.getFromSIToKorotkayaTonna(massSI);
+            case "фунт" -> Converter.UsaSystem.Mass.getFromSIToFunt(massSI);
+            case "унция" -> Converter.UsaSystem.Mass.getFromSIToUnciya(massSI);
+            case "си" -> massSI;
+        };
+
+        massTo.setText(Double.toString(massOut));
     }
 
     public void clickBtnValue() {
-
     }
 
     @Override
