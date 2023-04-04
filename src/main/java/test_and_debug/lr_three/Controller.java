@@ -49,7 +49,7 @@ public class Controller implements Initializable {
             case "миля" -> Converter.UsaSystem.Length.getFromMilyaToSI(lengthIn);
             case "ярд" -> Converter.UsaSystem.Length.getFromYardToSI(lengthIn);
             case "фут" -> Converter.UsaSystem.Length.getFromFutToSI(lengthIn);
-            case "си" -> lengthIn;
+            default -> lengthIn;
         };
 
         double lengthOut = switch (cmbBoxLenTo.getValue()) {
@@ -59,7 +59,7 @@ public class Controller implements Initializable {
             case "миля" -> Converter.UsaSystem.Length.getFromSIToMilya(lengthSI);
             case "ярд" -> Converter.UsaSystem.Length.getFromSIToYard(lengthSI);
             case "фут" -> Converter.UsaSystem.Length.getFromSIToFut(lengthSI);
-            case "си" -> lengthSI;
+            default -> lengthSI;
         };
 
         lengthTo.setText(Double.toString(lengthOut));
@@ -75,7 +75,7 @@ public class Controller implements Initializable {
             case "короткая тонная" -> Converter.UsaSystem.Mass.getFromKorotkayaTonnaToSI(massIn);
             case "фунт" -> Converter.UsaSystem.Mass.getFromFuntToSI(massIn);
             case "унция" -> Converter.UsaSystem.Mass.getFromUnciyaToSI(massIn);
-            case "си" -> massIn;
+            default -> massIn;
         };
 
         double massOut = switch (cmbBoxMassTo.getValue()) {
@@ -85,7 +85,7 @@ public class Controller implements Initializable {
             case "короткая тонная" -> Converter.UsaSystem.Mass.getFromSIToKorotkayaTonna(massSI);
             case "фунт" -> Converter.UsaSystem.Mass.getFromSIToFunt(massSI);
             case "унция" -> Converter.UsaSystem.Mass.getFromSIToUnciya(massSI);
-            case "си" -> massSI;
+            default -> massSI;
         };
 
         massTo.setText(Double.toString(massOut));
@@ -101,7 +101,7 @@ public class Controller implements Initializable {
             case "баррель" -> Converter.UsaSystem.Value.getFromBarrelToSI(valueIn);
             case "галлон" -> Converter.UsaSystem.Value.getFromGalonToSI(valueIn);
             case "пинта" -> Converter.UsaSystem.Value.getFromPintaToSI(valueIn);
-            case "си" -> valueIn;
+            default -> valueIn;
         };
 
         double valueOut = switch (valueTo.getText()) {
@@ -111,7 +111,7 @@ public class Controller implements Initializable {
             case "баррель" -> Converter.UsaSystem.Value.getFromSIToBarrel(valueIn);
             case "галлон" -> Converter.UsaSystem.Value.getFromSIToGalon(valueIn);
             case "пинта" -> Converter.UsaSystem.Value.getFromSIToPinta(valueIn);
-            case "си" -> valueIn;
+            default -> valueIn;
         };
 
         valueTo.setText(Double.toString(valueOut));
