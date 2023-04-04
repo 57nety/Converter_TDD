@@ -52,7 +52,7 @@ public class Controller implements Initializable {
             case "си" -> lengthIn;
         };
 
-        double lengthOut = switch (cmbBoxLenTo.getValue()){
+        double lengthOut = switch (cmbBoxLenTo.getValue()) {
             case "межевая верста" -> Converter.OldRusSystem.Length.getFromSIToMejevayaVersta(lengthSI);
             case "маховая сажень" -> Converter.OldRusSystem.Length.getFromSIToMahovayaSajen(lengthSI);
             case "аршин" -> Converter.OldRusSystem.Length.getFromSIToArshin(lengthSI);
@@ -68,7 +68,7 @@ public class Controller implements Initializable {
     public void clickBtnMass() {
         double massIn = Double.parseDouble(massFrom.getText());
 
-        double massSI = switch (cmbBoxMassFrom.getValue()){
+        double massSI = switch (cmbBoxMassFrom.getValue()) {
             case "берковец" -> Converter.OldRusSystem.Mass.getFromBerkovecToSI(massIn);
             case "золотник" -> Converter.OldRusSystem.Mass.getFromZolotnikToSI(massIn);
             case "доля" -> Converter.OldRusSystem.Mass.getFromDolyaToSI(massIn);
@@ -78,7 +78,7 @@ public class Controller implements Initializable {
             case "си" -> massIn;
         };
 
-        double massOut = switch (cmbBoxMassTo.getValue()){
+        double massOut = switch (cmbBoxMassTo.getValue()) {
             case "берковец" -> Converter.OldRusSystem.Mass.getFromSiToBerkovec(massSI);
             case "золотник" -> Converter.OldRusSystem.Mass.getFromSIToZolotnik(massSI);
             case "доля" -> Converter.OldRusSystem.Mass.getFromSIToDolya(massSI);
@@ -92,6 +92,29 @@ public class Controller implements Initializable {
     }
 
     public void clickBtnValue() {
+        double valueIn = Double.parseDouble(valueFrom.getText());
+
+        double valueSI = switch (valueFrom.getText()) {
+            case "штоф" -> Converter.OldRusSystem.Value.getFromShtofToSI(valueIn);
+            case "чарка" -> Converter.OldRusSystem.Value.getFromCharkaToSI(valueIn);
+            case "шкалик" -> Converter.OldRusSystem.Value.getFromShkalikToSI(valueIn);
+            case "баррель" -> Converter.UsaSystem.Value.getFromBarrelToSI(valueIn);
+            case "галлон" -> Converter.UsaSystem.Value.getFromGalonToSI(valueIn);
+            case "пинта" -> Converter.UsaSystem.Value.getFromPintaToSI(valueIn);
+            case "си" -> valueIn;
+        };
+
+        double valueOut = switch (valueTo.getText()) {
+            case "штоф" -> Converter.OldRusSystem.Value.getFromSIToShtof(valueIn);
+            case "чарка" -> Converter.OldRusSystem.Value.getFromSIToCharka(valueIn);
+            case "шкалик" -> Converter.OldRusSystem.Value.getFromSIToShkalik(valueIn);
+            case "баррель" -> Converter.UsaSystem.Value.getFromSIToBarrel(valueIn);
+            case "галлон" -> Converter.UsaSystem.Value.getFromSIToGalon(valueIn);
+            case "пинта" -> Converter.UsaSystem.Value.getFromSIToPinta(valueIn);
+            case "си" -> valueIn;
+        };
+
+        valueTo.setText(Double.toString(valueOut));
     }
 
     @Override
