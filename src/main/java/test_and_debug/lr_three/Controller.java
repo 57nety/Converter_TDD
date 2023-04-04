@@ -1,0 +1,9 @@
+package test_and_debug.lr_three;
+
+import javafx.fxml.Initializable;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class Controller{
+}
