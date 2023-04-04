@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -40,81 +41,93 @@ public class Controller implements Initializable {
     private TextField valueTo;
 
     public void clickBtnLength() {
-        double lengthIn = Double.parseDouble(lengthFrom.getText());
+        try {
+            double lengthIn = Double.parseDouble(lengthFrom.getText());
 
-        double lengthSI = switch (cmbBoxLenFrom.getValue()) {
-            case "межевая верста" -> Converter.OldRusSystem.Length.getFromMejevayaVerstaToSI(lengthIn);
-            case "маховая сажень" -> Converter.OldRusSystem.Length.getFromMahovayaSajenToSI(lengthIn);
-            case "аршин" -> Converter.OldRusSystem.Length.getFromArshinToSI(lengthIn);
-            case "миля" -> Converter.UsaSystem.Length.getFromMilyaToSI(lengthIn);
-            case "ярд" -> Converter.UsaSystem.Length.getFromYardToSI(lengthIn);
-            case "фут" -> Converter.UsaSystem.Length.getFromFutToSI(lengthIn);
-            default -> lengthIn;
-        };
+            double lengthSI = switch (cmbBoxLenFrom.getValue()) {
+                case "межевая верста" -> Converter.OldRusSystem.Length.getFromMejevayaVerstaToSI(lengthIn);
+                case "маховая сажень" -> Converter.OldRusSystem.Length.getFromMahovayaSajenToSI(lengthIn);
+                case "аршин" -> Converter.OldRusSystem.Length.getFromArshinToSI(lengthIn);
+                case "миля" -> Converter.UsaSystem.Length.getFromMilyaToSI(lengthIn);
+                case "ярд" -> Converter.UsaSystem.Length.getFromYardToSI(lengthIn);
+                case "фут" -> Converter.UsaSystem.Length.getFromFutToSI(lengthIn);
+                default -> lengthIn;
+            };
 
-        double lengthOut = switch (cmbBoxLenTo.getValue()) {
-            case "межевая верста" -> Converter.OldRusSystem.Length.getFromSIToMejevayaVersta(lengthSI);
-            case "маховая сажень" -> Converter.OldRusSystem.Length.getFromSIToMahovayaSajen(lengthSI);
-            case "аршин" -> Converter.OldRusSystem.Length.getFromSIToArshin(lengthSI);
-            case "миля" -> Converter.UsaSystem.Length.getFromSIToMilya(lengthSI);
-            case "ярд" -> Converter.UsaSystem.Length.getFromSIToYard(lengthSI);
-            case "фут" -> Converter.UsaSystem.Length.getFromSIToFut(lengthSI);
-            default -> lengthSI;
-        };
+            double lengthOut = switch (cmbBoxLenTo.getValue()) {
+                case "межевая верста" -> Converter.OldRusSystem.Length.getFromSIToMejevayaVersta(lengthSI);
+                case "маховая сажень" -> Converter.OldRusSystem.Length.getFromSIToMahovayaSajen(lengthSI);
+                case "аршин" -> Converter.OldRusSystem.Length.getFromSIToArshin(lengthSI);
+                case "миля" -> Converter.UsaSystem.Length.getFromSIToMilya(lengthSI);
+                case "ярд" -> Converter.UsaSystem.Length.getFromSIToYard(lengthSI);
+                case "фут" -> Converter.UsaSystem.Length.getFromSIToFut(lengthSI);
+                default -> lengthSI;
+            };
 
-        lengthTo.setText(Double.toString(lengthOut));
+            lengthTo.setText(Double.toString(lengthOut));
+        } catch (Exception e) {
+            System.out.println("Что-то не так:\n- Не выбраны величины ковертации\n- Поле исходного значения не корректно");
+        }
     }
 
     public void clickBtnMass() {
-        double massIn = Double.parseDouble(massFrom.getText());
+        try {
+            double massIn = Double.parseDouble(massFrom.getText());
 
-        double massSI = switch (cmbBoxMassFrom.getValue()) {
-            case "берковец" -> Converter.OldRusSystem.Mass.getFromBerkovecToSI(massIn);
-            case "золотник" -> Converter.OldRusSystem.Mass.getFromZolotnikToSI(massIn);
-            case "доля" -> Converter.OldRusSystem.Mass.getFromDolyaToSI(massIn);
-            case "короткая тонная" -> Converter.UsaSystem.Mass.getFromKorotkayaTonnaToSI(massIn);
-            case "фунт" -> Converter.UsaSystem.Mass.getFromFuntToSI(massIn);
-            case "унция" -> Converter.UsaSystem.Mass.getFromUnciyaToSI(massIn);
-            default -> massIn;
-        };
+            double massSI = switch (cmbBoxMassFrom.getValue()) {
+                case "берковец" -> Converter.OldRusSystem.Mass.getFromBerkovecToSI(massIn);
+                case "золотник" -> Converter.OldRusSystem.Mass.getFromZolotnikToSI(massIn);
+                case "доля" -> Converter.OldRusSystem.Mass.getFromDolyaToSI(massIn);
+                case "короткая тонная" -> Converter.UsaSystem.Mass.getFromKorotkayaTonnaToSI(massIn);
+                case "фунт" -> Converter.UsaSystem.Mass.getFromFuntToSI(massIn);
+                case "унция" -> Converter.UsaSystem.Mass.getFromUnciyaToSI(massIn);
+                default -> massIn;
+            };
 
-        double massOut = switch (cmbBoxMassTo.getValue()) {
-            case "берковец" -> Converter.OldRusSystem.Mass.getFromSiToBerkovec(massSI);
-            case "золотник" -> Converter.OldRusSystem.Mass.getFromSIToZolotnik(massSI);
-            case "доля" -> Converter.OldRusSystem.Mass.getFromSIToDolya(massSI);
-            case "короткая тонная" -> Converter.UsaSystem.Mass.getFromSIToKorotkayaTonna(massSI);
-            case "фунт" -> Converter.UsaSystem.Mass.getFromSIToFunt(massSI);
-            case "унция" -> Converter.UsaSystem.Mass.getFromSIToUnciya(massSI);
-            default -> massSI;
-        };
+            double massOut = switch (cmbBoxMassTo.getValue()) {
+                case "берковец" -> Converter.OldRusSystem.Mass.getFromSiToBerkovec(massSI);
+                case "золотник" -> Converter.OldRusSystem.Mass.getFromSIToZolotnik(massSI);
+                case "доля" -> Converter.OldRusSystem.Mass.getFromSIToDolya(massSI);
+                case "короткая тонная" -> Converter.UsaSystem.Mass.getFromSIToKorotkayaTonna(massSI);
+                case "фунт" -> Converter.UsaSystem.Mass.getFromSIToFunt(massSI);
+                case "унция" -> Converter.UsaSystem.Mass.getFromSIToUnciya(massSI);
+                default -> massSI;
+            };
 
-        massTo.setText(Double.toString(massOut));
+            massTo.setText(Double.toString(massOut));
+        } catch (Exception e) {
+            System.out.println("Что-то не так:\n- Не выбраны величины ковертации\n- Поле исходного значения не корректно");
+        }
     }
 
     public void clickBtnValue() {
-        double valueIn = Double.parseDouble(valueFrom.getText());
+        try {
+            double valueIn = Double.parseDouble(valueFrom.getText());
 
-        double valueSI = switch (valueFrom.getText()) {
-            case "штоф" -> Converter.OldRusSystem.Value.getFromShtofToSI(valueIn);
-            case "чарка" -> Converter.OldRusSystem.Value.getFromCharkaToSI(valueIn);
-            case "шкалик" -> Converter.OldRusSystem.Value.getFromShkalikToSI(valueIn);
-            case "баррель" -> Converter.UsaSystem.Value.getFromBarrelToSI(valueIn);
-            case "галлон" -> Converter.UsaSystem.Value.getFromGalonToSI(valueIn);
-            case "пинта" -> Converter.UsaSystem.Value.getFromPintaToSI(valueIn);
-            default -> valueIn;
-        };
+            double valueSI = switch (cmbBoxValueFrom.getValue()) {
+                case "штоф" -> Converter.OldRusSystem.Value.getFromShtofToSI(valueIn);
+                case "чарка" -> Converter.OldRusSystem.Value.getFromCharkaToSI(valueIn);
+                case "шкалик" -> Converter.OldRusSystem.Value.getFromShkalikToSI(valueIn);
+                case "баррель" -> Converter.UsaSystem.Value.getFromBarrelToSI(valueIn);
+                case "галлон" -> Converter.UsaSystem.Value.getFromGalonToSI(valueIn);
+                case "пинта" -> Converter.UsaSystem.Value.getFromPintaToSI(valueIn);
+                default -> valueIn;
+            };
 
-        double valueOut = switch (valueTo.getText()) {
-            case "штоф" -> Converter.OldRusSystem.Value.getFromSIToShtof(valueIn);
-            case "чарка" -> Converter.OldRusSystem.Value.getFromSIToCharka(valueIn);
-            case "шкалик" -> Converter.OldRusSystem.Value.getFromSIToShkalik(valueIn);
-            case "баррель" -> Converter.UsaSystem.Value.getFromSIToBarrel(valueIn);
-            case "галлон" -> Converter.UsaSystem.Value.getFromSIToGalon(valueIn);
-            case "пинта" -> Converter.UsaSystem.Value.getFromSIToPinta(valueIn);
-            default -> valueIn;
-        };
+            double valueOut = switch (cmbBoxValueTo.getValue()) {
+                case "штоф" -> Converter.OldRusSystem.Value.getFromSIToShtof(valueSI);
+                case "чарка" -> Converter.OldRusSystem.Value.getFromSIToCharka(valueSI);
+                case "шкалик" -> Converter.OldRusSystem.Value.getFromSIToShkalik(valueSI);
+                case "баррель" -> Converter.UsaSystem.Value.getFromSIToBarrel(valueSI);
+                case "галлон" -> Converter.UsaSystem.Value.getFromSIToGalon(valueSI);
+                case "пинта" -> Converter.UsaSystem.Value.getFromSIToPinta(valueSI);
+                default -> valueSI;
+            };
 
-        valueTo.setText(Double.toString(valueOut));
+            valueTo.setText(Double.toString(valueOut));
+        } catch (Exception e) {
+            System.out.println("Что-то не так:\n- Не выбраны величины ковертации\n- Поле исходного значения не корректно");
+        }
     }
 
     @Override
