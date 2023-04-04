@@ -37,17 +37,17 @@
                   <ComboBox fx:id="cmbBoxMassTo" layoutX="290.0" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="210.0" promptText="Единица измерения" />
                   <TextField fx:id="massFrom" layoutX="30.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="210.0" promptText="Введите размерность" />
                   <TextField fx:id="massTo" editable="false" layoutX="290.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="210.0" />
-                  <Label layoutX="260.0" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="в">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                  </Label>
                   <Label layoutX="260.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="=">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
                   <Button layoutX="205.0" layoutY="146.0" mnemonicParsing="false" onAction="#clickBtnMass" text="Конвертировать" />
+                  <Label layoutX="253.0" layoutY="36.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="=&gt;">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
          </content>
@@ -60,17 +60,17 @@
                   <ComboBox fx:id="cmbBoxValueTo" layoutX="290.0" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="210.0" promptText="Единица измерения" />
                   <TextField fx:id="valueFrom" layoutX="30.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="210.0" promptText="Введите размерность" />
                   <TextField fx:id="valueTo" editable="false" layoutX="290.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="210.0" />
-                  <Label layoutX="260.0" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="в">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                  </Label>
                   <Label layoutX="260.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="=">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
                   <Button layoutX="205.0" layoutY="146.0" mnemonicParsing="false" onAction="#clickBtnValue" text="Конвертировать" />
+                  <Label layoutX="253.0" layoutY="36.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="=&gt;">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
          </content>
