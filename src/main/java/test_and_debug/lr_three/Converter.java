@@ -1,11 +1,16 @@
 package test_and_debug.lr_three;
 
 public class Converter {
-    private Converter(){}
+    private Converter() {
+    }
+
     public static class OldRusSystem {
-        private OldRusSystem(){}
+        private OldRusSystem() {
+        }
+
         public static class Length {
-            private Length(){}
+            private Length() {
+            }
 
             /***
              * Метод конвертирующий длинну из межевой версты в метры
@@ -63,7 +68,8 @@ public class Converter {
         }
 
         public static class Mass {
-            private Mass(){}
+            private Mass() {
+            }
 
             /***
              * Метод конвертирует массу из берковец в килограмм
@@ -121,7 +127,9 @@ public class Converter {
         }
 
         public static class Value {
-            private Value(){}
+            private Value() {
+            }
+
             /***
              * Метод конвертирует объём из штоф в метр кубический
              * @param value - объём в штоф
@@ -180,9 +188,13 @@ public class Converter {
     }
 
     public static class UsaSystem {
-        private UsaSystem(){}
+        private UsaSystem() {
+        }
+
         public static class Length {
-            private Length(){}
+            private Length() {
+            }
+
             /***
              * Метод конвертирует длинну из миля в метры
              * @param length - длина в миля
@@ -239,7 +251,9 @@ public class Converter {
         }
 
         public static class Mass {
-            private Mass(){}
+            private Mass() {
+            }
+
             /***
              * Метод конвертирует массу из короткая тонна в килограммы
              * @param mass - масса в короткая тонна
@@ -296,13 +310,15 @@ public class Converter {
         }
 
         public static class Value {
-            private Value(){}
+            private Value() {
+            }
+
             /***
              * Метод конвертирует объём из баррель в кубические метры
              * @param value - объём в баррель
              * @return результат - объём в кубических метрах
              */
-            public static double getFromBarrelToSI(double value){
+            public static double getFromBarrelToSI(double value) {
                 return value * 0.159;
             }
 
@@ -329,7 +345,7 @@ public class Converter {
              * @param value - объём в метрах кубических
              * @return результат - объём в галон
              */
-            public static double getFromSIToGalon(double value){
+            public static double getFromSIToGalon(double value) {
                 return value / 0.003785;
             }
 
@@ -338,7 +354,7 @@ public class Converter {
              * @param value - объём в пинта
              * @return результат - объём в метрах кубических
              */
-            public static double getFromPintaToSI(double value){
+            public static double getFromPintaToSI(double value) {
                 return value * 0.0004732;
             }
 
